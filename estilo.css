@@ -1,0 +1,299 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080d20;
+    color: white;
+}
+
+/* IMÁGENES NASA */
+
+:root {
+    --supernova: url("https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2023/10/STScI-01HBBMF6GFYQG7ECGX1WD3W92B.png?fit=clip&h=1742&w=2000");
+
+    --neutron: url("https://assets.science.nasa.gov/dynamicimage/assets/science/psd/photojournal/pia/pia23/pia23863/PIA23863.jpg?crop=faces%2Cfocalpoint&fit=clip&h=864&w=1536");
+}
+
+/* NAVEGACIÓN */
+
+nav {
+    background: #151a38;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav button {
+    background: transparent;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+nav button:hover {
+    color: #bca3ff;
+}
+
+/* INTERFACES */
+
+.pantalla {
+    display: none;
+    min-height: 90vh;
+    padding: 35px 20px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pantalla.activa {
+    display: block;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: auto;
+}
+
+h1 {
+    color: #c5a6ff;
+    text-align: center;
+    font-size: 36px;
+}
+
+h2, h3 {
+    color: #bca3ff;
+}
+
+p {
+    line-height: 1.7;
+}
+
+/* INICIO */
+
+#inicio {
+    background:
+    radial-gradient(circle at 20% 30%, #35215e, transparent 40%),
+    radial-gradient(circle at 80% 70%, #172d59, transparent 40%),
+    #080d20;
+}
+
+#inicio h1 {
+    font-size: 42px;
+}
+
+.introduccion {
+    background: rgba(23,31,64,.92);
+    border: 1px solid #6755a5;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 550px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.inicio-contenido {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.imagen-universo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #9275d8;
+    box-shadow: 0 0 25px #7652c7;
+}
+
+.opcion {
+    background: rgba(23,31,64,.94);
+    padding: 20px;
+    border: 1px solid #6755a5;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* BOTONES */
+
+.boton {
+    background: #6746b8;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    margin: 8px 0;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.boton:hover {
+    background: #9674ed;
+    transform: scale(1.03);
+}
+
+/* FONDOS */
+
+#supernovas {
+    background-image:
+    linear-gradient(rgba(8,13,32,.84),rgba(8,13,32,.91)),
+    var(--supernova);
+}
+
+#neutrones {
+    background-image:
+    linear-gradient(rgba(8,13,32,.84),rgba(8,13,32,.92)),
+    var(--neutron);
+}
+
+#comentarios {
+    background-image:
+    linear-gradient(rgba(8,13,32,.87),rgba(8,13,32,.94)),
+    var(--supernova);
+}
+
+/* TARJETAS */
+
+.tarjeta {
+    background: rgba(23,31,64,.94);
+    border: 1px solid #394477;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* INFORMACIÓN SUPERNOVAS */
+
+.seccion-informacion {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.seccion-informacion.invertida {
+    grid-template-columns: 2fr 1fr;
+}
+
+.seccion-informacion img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #6755a5;
+}
+
+.texto-informacion {
+    background: rgba(23,31,64,.94);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #394477;
+}
+
+/* GALERÍA */
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.galeria-item {
+    background: rgba(23,31,64,.94);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #6755a5;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.galeria-item p {
+    color: #c5a6ff;
+    font-size: 13px;
+}
+
+/* PREGUNTAS Y CURIOSIDADES */
+
+.pregunta {
+    background: rgba(23,31,64,.94);
+    border: 1px solid #394477;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 12px 0;
+}
+
+.pregunta h3 {
+    margin-top: 0;
+}
+
+.contenido-extra {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.imagen-extra {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* COMENTARIOS */
+
+.contenido-final {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 13px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.enlaces a {
+    display: block;
+    padding: 18px;
+    margin: 15px 0;
+    background: rgba(8,13,32,.75);
+    color: #c5a6ff;
+    border: 1px solid #6755a5;
+    border-radius: 8px;
+    text-decoration: none;
+}
